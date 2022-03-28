@@ -5,14 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(create: (_) => PersonProvider()),
-      ChangeNotifierProvider(create: (_) => HomeProvider()),
-    ],
-    child: const App()
-  ));
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (_) => PersonProvider()),
+    ChangeNotifierProvider(create: (_) => HomeProvider()),
+  ], child: const App()));
 }
-
-
-
